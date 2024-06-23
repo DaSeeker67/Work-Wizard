@@ -10,7 +10,7 @@ function App() {
   useEffect(() => {
     const fetchTodos = async () => {
       try {
-        const response = await fetch("http://localhost:3000/todos");
+        const response = await fetch("https://work-wizard-api.vercel.app/todos");
         if (!response.ok) {
           throw new Error('Failed to fetch todos');
         }
