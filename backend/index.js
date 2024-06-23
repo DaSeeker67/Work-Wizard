@@ -5,12 +5,12 @@ const cors= require("cors");
 const app = express();
 app.use(cors({
     origin: ["https://deploy-mern-1whq.vercel.app"],
-    methods:["POST","GET","PUT"],
+    methods:["POST","GET","PUT","POST"],
     credentials: true
 
 }));
 
-
+app.get('/',(req,res)=>{res.json("Working fine");})
 
 app.use(express.json());
 app.post('/todo', async function(req,res){
