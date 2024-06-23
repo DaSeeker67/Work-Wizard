@@ -11,7 +11,7 @@ export function Todo({ todos, onTodoCompleted }) {
     const sortedTodos = todos.map(prioritizeTodos).sort((a, b) => b.priority - a.priority);
     const deleteTodo = async(id) => {
         try {
-            const response = await fetch('http://localhost:3000/delete',{
+            const response = await fetch('https://work-wizard-api.vercel.app/delete',{
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
@@ -33,7 +33,7 @@ export function Todo({ todos, onTodoCompleted }) {
 
     const markCompleted = async (id) => {
         try {
-            const response = await fetch(`http://localhost:3000/completed/`, {
+            const response = await fetch(`https://work-wizard-api.vercel.app/completed/`, {
                 method: "PUT",
                 headers: {
                     "Content-Type": "application/json",
